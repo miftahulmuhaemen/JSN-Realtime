@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/first_transmitter"
+            android:icon="@drawable/ic_filter_1_black_24dp"
+            android:title="1st Transmitter"/>
+
+    <item
+            android:id="@+id/second_transmitter"
+            android:icon="@drawable/ic_filter_2_black_24dp"
+            android:title="2nd Transmitter"/>
+
+</menu>

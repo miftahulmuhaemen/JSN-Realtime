@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+        <TextView
+                android:id="@+id/waktu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textSize="18sp" />
+
+        <TextView
+                android:id="@+id/temp_atas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:paddingStart="6dp"
+                android:text="40.29"
+                android:textSize="18sp" />
+
+        <TextView
+                android:id="@+id/temp_bawah"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:paddingStart="6dp"
+                android:text="40.29"
+                android:textSize="18sp" />
+
+        <TextView
+                android:id="@+id/relative_humidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:text="60.32"
+                android:textSize="18sp" />
+
+        <ImageView
+                android:id="@+id/api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:src="@drawable/ic_check_box_black_24dp" />
+
+        <ImageView
+                android:id="@+id/asap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:src="@drawable/ic_check_box_outline_blank_black_24dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
