@@ -1,37 +1,60 @@
 package com.example.lkti.viewmodel
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.lkti.model.Data
 import com.example.lkti.network.RetrofitFactory
 import kotlinx.coroutines.*
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 import retrofit2.HttpException
+import java.util.*
+import kotlin.concurrent.schedule
 
-class DataRepository {
+class DataRepository : AnkoLogger {
 
-            val completableJob = Job()
-    private var mutableLiveData = MutableLiveData<List<Data>>()
+    val completableJob = Job()
+    var liveRealtimeData = MutableLiveData<List<Data>>()
+    var liveBulkData = MutableLiveData<List<Data>>()
     private val coroutineScope = CoroutineScope(Dispatchers.IO + completableJob)
     private val thisApiCorService by lazy {
         RetrofitFactory.makeRetrofitService()
     }
 
-    fun getMutableLiveData(): MutableLiveData<List<Data>> {
-        coroutineScope.launch {
-            val request = thisApiCorService.getData()
-            withContext(Dispatchers.Main) {
-                try {
-                    if (request.isSuccessful)
-                        mutableLiveData.value = request.body()
-                } catch (e: HttpException) {
-                    // Log exception //
-
-                } catch (e: Throwable) {
-                    // Log error //)
+    fun getRealtimeData(): MutableLiveData<List<Data>> {
+        Timer("getRealtimeData", false).schedule(3000, 3000) {
+            coroutineScope.launch {
+                val request = thisApiCorService.realtimeData()
+                withContext(Dispatchers.Main) {
+                    try {
+                        if (request.isSuccessful)
+                            liveRealtimeData.value = request.body()
+                    } catch (e: HttpException) {
+                        error(e)
+                    } catch (e: Throwable) {
+                        error(e)
+                    }
                 }
             }
         }
-        return mutableLiveData
+        return liveRealtimeData
     }
 
+    fun getBulkData(): MutableLiveData<List<Data>> {
+        coroutineScope.launch {
+            val request = thisApiCorService.bulkData()
+            withContext(Dispatchers.Main) {
+                try {
+                    if (request.isSuccessful) {
+                        liveBulkData.value = request.body()
+                    }
+                } catch (e: HttpException) {
+                    error(e)
+                } catch (e: Throwable) {
+                    error(e)
+                }
+            }
+        }
+        return liveBulkData
+    }
 
 }

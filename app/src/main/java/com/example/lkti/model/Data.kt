@@ -11,8 +11,8 @@ data class Data(
     @SerializedName("T_atas_2") var T_atas_2: Double?,
     @SerializedName("RH_bawah_1") var RH_bawah_1: Double?,
     @SerializedName("RH_bawah_2") var RH_bawah_2: Double?,
-    @SerializedName("Asap_1") var Asap_1: String?,
-    @SerializedName("Asap_2") var Asap_2: String?,
-    @SerializedName("Api_1") var Api_1: String?,
-    @SerializedName("Api_2") var Api_2: String?
+    @SerializedName("Asap_1") var Asap_1: Double?,
+    @SerializedName("Asap_2") var Asap_2: Double?,
+    @SerializedName("Api_1") var Api_1: Int?,
+    @SerializedName("Api_2") var Api_2: Int?
 )

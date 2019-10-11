@@ -14,25 +14,24 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.7"
+                android:layout_weight="1.1"
                 android:gravity="center"
                 android:src="@drawable/ic_watch_later_black_24dp" />
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+            android:layout_weight="1.1"
                 android:drawableEnd="@drawable/ic_keyboard_arrow_up_black_24dp"
                 android:gravity="center"
                 android:text="T°"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+            android:layout_weight="1.1"
                 android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
                 android:gravity="center"
                 android:text="T°"
@@ -42,7 +41,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.9"
+            android:layout_weight="1.1"
                 android:gravity="center"
                 android:text="RH%"
                 android:textSize="18sp"
@@ -51,17 +50,17 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.9"
-                android:gravity="center"
-                android:src="@drawable/ic_wb_sunny_black_24dp" />
-
-
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+            android:layout_weight="1.1"
                 android:gravity="center"
                 android:src="@drawable/ic_smoking_rooms_black_24dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.48"
+            android:gravity="center"
+            android:src="@drawable/ic_wb_sunny_black_24dp" />
+
 
     </LinearLayout>
 

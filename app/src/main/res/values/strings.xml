@@ -6,6 +6,6 @@
     <string name="asap">Asap</string>
     <string name="blan" />
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="realtime">Realtime</string>
+    <string name="bulk">Bulk</string>
 </resources>

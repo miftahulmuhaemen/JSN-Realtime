@@ -4,11 +4,11 @@
     <item
             android:id="@+id/first_transmitter"
             android:icon="@drawable/ic_filter_1_black_24dp"
-            android:title="1st Transmitter"/>
+            android:title="First"/>
 
     <item
             android:id="@+id/second_transmitter"
             android:icon="@drawable/ic_filter_2_black_24dp"
-            android:title="2nd Transmitter"/>
+            android:title="Second"/>
 
 </menu>
